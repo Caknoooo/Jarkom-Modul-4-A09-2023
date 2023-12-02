@@ -21,6 +21,7 @@
   - [Penggabungan IP](#penggabungan-ip)
   - [Tree](#tree-1)
   - [Pembagian IP](#pembagian-ip-2)
+  - [Testing](#testing)
 
 ## Topologi
 
@@ -135,3 +136,7 @@ Setelah dilakukannya ``penggabungan IP``, sekarang kita melakukan pembagian IP d
 Berikut merupakan hasil dari pembagian IP berdasarkan Tree yang telah dibuat sebelumnya 
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/1eed8a35-3ae0-4b03-9a3d-cd853c297f9d)
+
+### Testing
+
+https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/72368866-f77b-4bbf-a979-86aed03e464c
