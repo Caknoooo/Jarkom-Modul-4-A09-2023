@@ -18,8 +18,8 @@
   - [Tree](#tree)
   - [Pembagian IP](#pembagian-ip)
 - [CIDR](#cidr)
-  - [Tree](#tree-1)
   - [Penggabungan IP](#penggabungan-ip)
+  - [Tree](#tree-1)
   - [Pembagian IP](#pembagian-ip-2)
 
 ## Topologi
@@ -53,4 +53,76 @@ Berikut merupakan hasil ``pemecahan`` subnet besar yang akan dibentuk menjadi ``
 Berikut adalah hasil dari pembagian ``IP`` yang telah kami peroleh dari hasil ``pemecahan`` tadi menjadi jaringan yang lebih kecil
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/99979f3a-e407-4923-926d-07cf22ec1e7e)
+
+## CIDR
+CIDR atau biasa dikenal *Classless Inter-Domain* Routing adalah suatu metode ``pengalamatan dan pengelompokan alamat IP`` yang memungkinkan penggunaan lebih efisien dari ruang alamat IP yang tersedia di Internet. Sebelum diperkenalkannya ``CIDR``, pengalamatan IP didasarkan pada kelas-kelas, seperti ``kelas A, kelas B, dan kelas C``. Setiap kelas memiliki ``ukuran tetap`` untuk jaringan dan host, yang seringkali mengakibatkan pemborosan alamat IP. 
+
+**CIDR** menggantikan ``pendekatan kelas`` dengan memperkenalkan notasi format baru yang memungkinkan ``fleksibilitas`` lebih besar dalam pengelompokan dan alokasi alamat IP. Format notasi CIDR terdiri dari alamat IP dan prefiks (subnet mask) yang diwakili dalam ``format bilangan biner``, seperti contoh berikut:
+```
+192.173.0.0 / 24
+```
+Dalam contoh ini, ``"192.173.0.0"`` adalah alamat jaringan, dan ``"/24"`` menunjukkan bahwa ``24 bit pertama`` dari alamat ini digunakan sebagai ``netmask`` (subnet mask). Dengan menggunakan CIDR, ``administrator jaringan`` dapat menentukan ukuran subnet yang sesuai dengan kebutuhan tanpa terikat pada batasan kelas tradisional.
+
+**Keuntungan utama** CIDR melibatkan ``penghematan alamat IP dan pengurangan pemborosan``. Dengan CIDR, tidak perlu lagi mengalokasikan blok alamat IP dengan ukuran yang tetap berdasarkan kelas. Sebagai contoh, jika suatu jaringan ``memerlukan 300 alamat IP``, administrator dapat menggunakan CIDR untuk mengalokasikan subnet dengan panjang netmask yang sesuai tanpa harus memilih kelas yang lebih besar dari yang dibutuhkan.
+
+CIDR juga ``mendukung agregasi rute``, yang memungkinkan penyederhanaan tabel routing di Internet. Dengan ``menggabungkan beberapa blok alamat IP ke dalam satu entri routing``, CIDR membantu mengurangi ukuran tabel routing dan efektif meningkatkan efisiensi dalam pengelolaan lalu lintas jaringan global.
+
+### Penggabungan IP
+Berikut merupakan inisialisasi kami yang akan digunakan untuk melakukan penggabungan IP
+
+#### Kondisi Node Awal
+
+![Node Pertama](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/e4bf530c-10f2-4d08-b082-d0e32af4537a)
+
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/be65147a-45a0-4cb3-831e-9094fc46e098)
+
+#### Penggabungan Node Pertama (B)
+
+![Node Kedua](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/c71e62d4-7dd4-4aeb-9975-2c61f17f2303)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/e6edd05d-1b46-4d71-a776-b6e73abf8b4f)
+
+#### Penggabungan Node Kedua (C)
+
+![Node Ketiga](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/455da297-fa41-48b4-a645-51d75ae4acde)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/1b087af3-f122-4832-8585-78e237559529)
+
+#### Penggabungan Node Ketiga
+
+![Node Keempat](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/fd9341b3-4501-48fb-92b2-8635b2986ac7)
+
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/2ab47d8c-fa03-4ce1-ba3e-7a30556223da)
+
+#### Penggabungan Node Keempat
+
+![Node Kelima](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/704d1e9e-c7d6-4c75-814e-d444b8251936)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/1231d69d-3dc3-4367-a324-e6c6ff832774)
+
+#### Penggabungan Node Kelima
+
+![Node Keenam](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/dbcb8a17-1c4c-488f-87da-de8883752c04)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/2583282e-889e-449c-88a8-982641f481e7)
+
+#### Penggabungan Node Keenam
+
+![Node Ketujuh](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/cc141291-0540-4f6c-9e35-718921101a78)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/a4ef6088-83a0-481d-9ec7-f4c0895dc4e4)
+
+#### Penggabungan Node Ketujuh
+
+![Node Kedelapan](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/520a647f-ba3b-490b-8fa5-d1b2d9deb6d8)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/4b6135ed-058f-4029-b391-0b12c5d3c1a0)
+
+#### Penggabungan Node Kedelapan
+
+![Node Kesembilan](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/3c0a9590-703a-4df5-8572-e2566292e43b)
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/a13429ee-aa4f-4481-b1bb-964ed0d98c55)
 
