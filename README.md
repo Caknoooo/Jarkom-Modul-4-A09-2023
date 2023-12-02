@@ -126,3 +126,12 @@ Berikut merupakan inisialisasi kami yang akan digunakan untuk melakukan penggabu
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/a13429ee-aa4f-4481-b1bb-964ed0d98c55)
 
+### Tree
+Setelah dilakukannya ``penggabungan IP``, sekarang kita melakukan pembagian IP dengan menggunakan ``tree`` pada masing-masing kelompok yang telah dibuat sebelumnya sebagai berikut
+
+![VLSM A09 (1)](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/b8f51411-59f6-413f-a832-4d0414773d57)
+
+### Pembagian IP
+Berikut merupakan hasil dari pembagian IP berdasarkan Tree yang telah dibuat sebelumnya 
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/1eed8a35-3ae0-4b03-9a3d-cd853c297f9d)
