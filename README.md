@@ -11,21 +11,26 @@
 ## Daftar Isi
 - [Laporan Resmi](#laporan-resmi)
   - [Daftar Isi](#daftar-isi)
-  - [Topologi](#topologi)
+  - [Topologi PKT CIDR](#topologi-pkt-cidr)
+  - [Topologi GNS VLSM](#topologi-gns-vlsm)
   - [Prefix IP](#prefix-ip)
   - [Rute](#rute)
 - [VLSM](#vlsm)
   - [Tree](#tree)
   - [Pembagian IP](#pembagian-ip)
+  - [Konfigurasi Network](#konfigurasi-network)
 - [CIDR](#cidr)
   - [Penggabungan IP](#penggabungan-ip)
   - [Tree](#tree-1)
   - [Pembagian IP](#pembagian-ip-2)
-  - [Testing](#testing)
 
-## Topologi
+## Topologi PKT CIDR
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/257d48f1-40ff-48b2-8504-65d7d8cc982d)
+
+## Topologi GNS VLSM 
+
+![image](https://github.com/Caknoooo/Jarkom-Modul-4-A09-2023/assets/92671053/69389c81-e897-4c92-b8c7-7f419a915ee4)
 
 ## Prefix IP 
 Kelompok kami memiliki prefix IP `192.173`
@@ -54,6 +59,448 @@ Berikut merupakan hasil ``pemecahan`` subnet besar yang akan dibentuk menjadi ``
 Berikut adalah hasil dari pembagian ``IP`` yang telah kami peroleh dari hasil ``pemecahan`` tadi menjadi jaringan yang lebih kecil
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/99979f3a-e407-4923-926d-07cf22ec1e7e)
+
+### Konfigurasi Network
+
+- RoyalCapital (63 Host)
+
+```
+#A1
+auto eth0
+iface eth0 inet static
+address 192.173.8.5
+netmask 255.255.255.0
+gateway 192.173.8.1
+```
+
+- WilleRegion (63 Host)
+
+```
+#A1
+auto eth0
+iface eth0 inet static
+address 192.173.8.10
+netmask 255.255.255.0
+gateway 192.173.8.1
+```
+
+- Denken 
+
+```
+auto lo
+iface lo inet loopback
+
+#A2
+auto eth0
+iface eth0 inet static
+address 192.173.7.106
+netmask 255.255.255.252
+gateway 192.173.7.105
+
+#A1
+auto eth1
+iface eth1 inet static
+address 192.173.8.1
+netmask 255.255.255.0
+```
+
+- Aura 
+
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+#A20
+auto eth1
+iface eth1 inet static
+address 192.173.7.141
+netmask 255.255.255.252
+
+#A2
+auto eth2
+iface eth2 inet static
+address 192.173.7.105
+netmask 255.255.255.252
+
+#A3
+auto eth3
+iface eth3 inet static
+address 192.173.7.109
+netmask 255.255.255.252
+```
+
+- Frieren 
+
+```
+auto lo
+iface lo inet loopback
+
+#A20
+auto eth0
+iface eth0 inet static
+address 192.173.7.142
+netmask 255.255.255.252
+gateway 192.173.7.141
+
+#A19
+auto eth1
+iface eth1 inet static
+address 192.173.7.137
+netmask 255.255.255.252
+
+#A21
+auto eth2
+iface eth2 inet static
+address 192.173.7.161
+netmask 255.255.255.224
+```
+
+- LakeKorridor (24 Host)
+
+```
+#A21
+auto eth0
+iface eth0 inet static
+address 192.173.7.165
+netmask 255.255.255.224
+gateway 192.173.7.161
+```
+
+- Flamme 
+
+```
+auto lo
+iface lo inet loopback
+
+#A19
+auto eth0
+iface eth0 inet static
+address 192.173.7.138
+netmask 255.255.255.252
+gateway 192.173.7.137
+
+#A14
+auto eth1
+iface eth1 inet static
+address 192.173.7.129
+netmask 255.255.255.252
+
+#A16
+auto eth2
+iface eth2 inet static
+address 192.173.20.1
+netmask 255.255.252.0
+
+#A17
+auto eth3
+iface eth3 inet static
+address 192.173.7.133
+netmask 255.255.255.252
+```
+
+- Fern 
+
+```
+auto lo
+iface lo inet loopback
+
+#A17
+auto eth0
+iface eth0 inet static
+address 192.173.7.134
+netmask 255.255.255.252
+gateway 192.173.7.133
+
+#A18
+auto eth1
+iface eth1 inet static
+address 192.173.24.1
+netmask 255.255.248.0
+```
+
+- LaubHills (397 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.25.5
+netmask 255.255.248.0
+gateway 192.173.24.1
+```
+
+- AppetitRegion (625 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.25.10
+netmask 255.255.248.0
+gateway 192.173.24.1
+```
+
+- RohrRoad (1000 Host)
+
+```
+#A16
+auto eth0
+iface eth0 inet static
+address 192.173.20.5
+netmask 255.255.252.0
+gateway 192.173.20.1
+```
+
+- Himmel 
+
+```
+auto lo
+iface lo inet loopback
+
+#A14
+auto eth0
+iface eth0 inet static
+address 192.173.7.130
+netmask 255.255.255.252
+gateway 192.173.7.129
+
+#A13
+auto eth1
+iface eth1 inet static
+address 192.173.7.145
+netmask 255.255.255.248
+```
+
+- ShcwerMountains (5 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.7.147
+netmask 255.255.255.248
+gateway 192.173.7.145
+```
+
+- Eisen 
+
+```
+auto lo
+iface lo inet loopback
+
+#A3
+auto eth0
+iface eth0 inet static
+address 192.173.7.110
+netmask 255.255.255.252
+gateway 192.173.7.109
+
+#A15
+auto eth1
+iface eth1 inet static
+address 192.173.7.153
+netmask 255.255.255.248
+
+#A4
+auto eth2
+iface eth2 inet static
+address 192.173.7.113
+netmask 255.255.255.252
+
+#A5
+auto eth3
+iface eth3 inet static
+address 192.173.7.117
+netmask 255.255.255.252
+
+#A8
+auto eth4
+iface eth4 inet static
+address 192.173.7.121
+netmask 255.255.255.252
+```
+
+- Stark 
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.7.114
+netmask 255.255.252.0
+gateway 192.173.7.113
+```
+
+- Lugner 
+
+```
+auto lo
+iface lo inet loopback
+
+#A5
+auto eth0
+iface eth0 inet static
+address 192.173.7.118
+gateway 192.173.7.117
+netmask 255.255.255.252
+
+#A6
+auto eth1
+iface eth1 inet static
+address 192.173.12.1
+netmask 255.255.252.0
+
+#A7
+auto eth2
+iface eth2 inet static
+address 192.173.9.1
+netmask 255.255.255.0
+```
+
+- TurkRegion (1000 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.12.5
+netmask 255.255.252.0
+gateway 192.173.12.1
+```
+
+- GrobeForest (250 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.9.5
+netmask 255.255.255.0
+gateway 192.173.9.1
+```
+
+- Richter 
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.7.154
+netmask 255.255.252.0
+gateway 192.173.7.153
+```
+
+- Revolte
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.7.155
+netmask 255.255.252.0
+gateway 192.173.7.153
+```
+
+- Linie 
+
+```
+auto lo
+iface lo inet loopback
+
+#A8
+auto eth0
+iface eth0 inet static
+address 192.173.7.122
+gateway 192.173.7.121
+netmask 255.255.255.252
+
+#A9
+auto eth1
+iface eth1 inet static
+address 192.173.10.1
+netmask 255.255.254.0
+
+#A10
+auto eth2
+iface eth2 inet static
+address 192.173.7.125
+netmask 255.255.255.252
+```
+
+- GranzChannel (254 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.10.5
+netmask 255.255.254.0
+gateway 192.173.10.1
+```
+
+- Lawine 
+
+```
+auto lo
+iface lo inet loopback
+
+#A10
+auto eth0
+iface eth0 inet static
+address 192.173.7.126
+netmask 255.255.255.252
+gateway 192.173.7.125
+
+#A11
+auto eth1
+iface eth1 inet static
+address 192.173.7.193
+netmask 255.255.255.192
+```
+
+- BredtRegion (29 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.7.197
+netmask 255.255.255.192
+gateway 192.173.7.193
+```
+
+- Heiter 
+
+```
+auto lo
+iface lo inet loopback
+
+#A11
+auto eth0
+iface eth0 inet static
+address 192.173.7.222
+netmask 255.255.255.192
+gateway 192.173.7.193
+
+#A12
+auto eth1
+iface eth1 inet static
+address 192.173.16.1
+netmask 255.255.252.0
+```
+
+- Sein 
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.16.2
+netmask 255.255.252.0
+gateway 192.173.16.1
+```
+
+- RiegelCanyon (510 Host)
+
+```
+auto eth0
+iface eth0 inet static
+address 192.173.16.7
+netmask 255.255.252.0
+gateway 192.173.16.1
+```
 
 ## CIDR
 CIDR atau biasa dikenal *Classless Inter-Domain* Routing adalah suatu metode ``pengalamatan dan pengelompokan alamat IP`` yang memungkinkan penggunaan lebih efisien dari ruang alamat IP yang tersedia di Internet. Sebelum diperkenalkannya ``CIDR``, pengalamatan IP didasarkan pada kelas-kelas, seperti ``kelas A, kelas B, dan kelas C``. Setiap kelas memiliki ``ukuran tetap`` untuk jaringan dan host, yang seringkali mengakibatkan pemborosan alamat IP. 
@@ -137,6 +584,6 @@ Berikut merupakan hasil dari pembagian IP berdasarkan Tree yang telah dibuat seb
 
 ![image](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/1eed8a35-3ae0-4b03-9a3d-cd853c297f9d)
 
-### Testing
+### Result 
 
-https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/72368866-f77b-4bbf-a979-86aed03e464c
+![video](https://github.com/Caknoooo/Jarkom-Modul-3-A09-2023/assets/92671053/72368866-f77b-4bbf-a979-86aed03e464c)
