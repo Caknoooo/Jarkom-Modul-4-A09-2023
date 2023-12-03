@@ -611,6 +611,8 @@ up route add -net 192.173.7.152 netmask 255.255.255.248 gw 192.173.7.110
 
 ### Testing
 
+https://github.com/Caknoooo/Jarkom-Modul-4-A09-2023/assets/92671053/6237435f-474b-405c-a06d-bb81e1e938d6
+
 ## CIDR
 CIDR atau biasa dikenal *Classless Inter-Domain* Routing adalah suatu metode ``pengalamatan dan pengelompokan alamat IP`` yang memungkinkan penggunaan lebih efisien dari ruang alamat IP yang tersedia di Internet. Sebelum diperkenalkannya ``CIDR``, pengalamatan IP didasarkan pada kelas-kelas, seperti ``kelas A, kelas B, dan kelas C``. Setiap kelas memiliki ``ukuran tetap`` untuk jaringan dan host, yang seringkali mengakibatkan pemborosan alamat IP. 
 
