@@ -8,9 +8,12 @@
 |M. Naufal Badruttamam | 5025211240 | https://github.com/Caknoooo |
 
 # Laporan Resmi
+
+Disini kami mengimplementasikan ``CIDR`` dengan menggunakan ``Cisco`` dan ``VLSM`` dengan menggunakan ``GNS3``
+
 ## Daftar Isi
 - [Laporan Resmi](#laporan-resmi)
-  - [Daftar Isi](#daftar-isi)
+- [Daftar Isi](#daftar-isi)
   - [Topologi PKT CIDR](#topologi-pkt-cidr)
   - [Topologi GNS VLSM](#topologi-gns-vlsm)
   - [Prefix IP](#prefix-ip)
@@ -19,6 +22,8 @@
   - [Tree](#tree)
   - [Pembagian IP](#pembagian-ip)
   - [Konfigurasi Network](#konfigurasi-network)
+  - [Routing](#routing)
+  - [Testing](#testing)
 - [CIDR](#cidr)
   - [Penggabungan IP](#penggabungan-ip)
   - [Tree](#tree-1)
@@ -501,6 +506,110 @@ address 192.173.16.7
 netmask 255.255.252.0
 gateway 192.173.16.1
 ```
+
+### Routing 
+
+- Denken 
+
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.173.7.105
+```
+
+- Lugner 
+
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.173.7.110
+```
+
+- Linie 
+
+```
+up route add -net 192.173.7.192 netmask 255.255.255.192 gw 192.173.7.126
+up route add -net 192.173.16.0 netmask 255.255.252.0 gw 192.173.7.126
+```
+
+- Lawine 
+
+```
+up route add -net 192.173.16.0 netmask 255.255.252.0 gw 192.173.7.222
+```
+
+- Heiter
+
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.173.7.126
+```
+
+- Himmel 
+
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.173.7.138
+```
+
+- Flamme 
+
+```
+up route add -net 192.173.24.0 netmask 255.255.248.0 gw 192.173.7.134
+up route add -net 192.173.7.144 netmask 255.255.255.248 gw 192.173.7.130
+```
+
+- Fern 
+
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.173.7.138
+```
+
+- Frieren
+
+```
+up route add -net 192.173.7.132 netmask 255.255.255.252 gw 192.173.7.138
+up route add -net 192.173.24.0 netmask 255.255.248.0 gw 192.173.7.138
+up route add -net 192.173.20.0 netmask 255.255.252.0 gw 192.173.7.138
+up route add -net 192.173.7.128 netmask 255.255.255.252 gw 192.173.7.138
+up route add -net 192.173.7.144 netmask 255.255.255.248 gw 192.173.7.138
+```
+
+- Eisen 
+
+```
+up route add -net 192.173.12.0 netmask 255.255.252.0 gw 192.173.7.118
+up route add -net 192.173.9.0 netmask 255.255.255.0 gw 192.173.7.118
+
+up route add -net 192.173.10.0 netmask 255.255.254.0 gw 192.173.7.122
+up route add -net 192.173.7.124 netmask 255.255.255.252 gw 192.173.7.122
+up route add -net 192.173.7.192 netmask 255.255.255.192 gw 192.173.7.122
+up route add -net 192.173.16.0 netmask 255.255.252.0 gw 192.173.7.122
+```
+
+- Aura 
+
+```
+# Frieren
+up route add -net 192.173.7.160 netmask 255.255.255.224 gw 192.173.7.142
+up route add -net 192.173.7.136 netmask 255.255.255.252 gw 192.173.7.142
+up route add -net 192.173.7.132 netmask 255.255.255.252 gw 192.173.7.142
+up route add -net 192.173.24.0 netmask 255.255.248.0 gw 192.173.7.142
+up route add -net 192.173.20.0 netmask 255.255.252.0 gw 192.173.7.142
+up route add -net 192.173.7.128 netmask 255.255.255.252 gw 192.173.7.142
+up route add -net 192.173.7.144 netmask 255.255.255.248 gw 192.173.7.142
+
+# Denken
+up route add -net 192.173.8.0 netmask 255.255.255.0 gw 192.173.7.106
+
+# Eisen
+up route add -net 192.173.7.112 netmask 255.255.255.252 gw 192.173.7.110
+up route add -net 192.173.7.116 netmask 255.255.255.252 gw 192.173.7.110
+up route add -net 192.173.12.0 netmask 255.255.252.0 gw 192.173.7.110
+up route add -net 192.173.9.0 netmask 255.255.255.0 gw 192.173.7.110
+up route add -net 192.173.7.120 netmask 255.255.255.252 gw 192.173.7.110
+up route add -net 192.173.10.0 netmask 255.255.254.0 gw 192.173.7.110
+up route add -net 192.173.7.124 netmask 255.255.255.252 gw 192.173.7.110
+up route add -net 192.173.7.192 netmask 255.255.255.192 gw 192.173.7.110
+up route add -net 192.173.16.0 netmask 255.255.252.0 gw 192.173.7.110
+up route add -net 192.173.7.152 netmask 255.255.255.248 gw 192.173.7.110
+```
+
+### Testing
 
 ## CIDR
 CIDR atau biasa dikenal *Classless Inter-Domain* Routing adalah suatu metode ``pengalamatan dan pengelompokan alamat IP`` yang memungkinkan penggunaan lebih efisien dari ruang alamat IP yang tersedia di Internet. Sebelum diperkenalkannya ``CIDR``, pengalamatan IP didasarkan pada kelas-kelas, seperti ``kelas A, kelas B, dan kelas C``. Setiap kelas memiliki ``ukuran tetap`` untuk jaringan dan host, yang seringkali mengakibatkan pemborosan alamat IP. 
