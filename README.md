@@ -27,8 +27,8 @@ Disini kami mengimplementasikan ``CIDR`` dengan menggunakan ``Cisco`` dan ``VLSM
 - [CIDR](#cidr)
   - [Penggabungan IP](#penggabungan-ip)
   - [Tree](#tree-1)
-  - [Pembagian IP](#pembagian-ip-2)
-  - [Testing](#testing-2)
+  - [Pembagian IP](#pembagian-ip-1)
+  - [Testing](#testing-1)
 
 ## Topologi PKT CIDR
 
